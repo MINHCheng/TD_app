@@ -162,10 +162,6 @@ function OptionBlotter() {
 
       <div style={priceRow}>
         <div>
-          <div style={labelSm}>Year fraction τ</div>
-          <div>{tau > 0 ? tau.toFixed(6) : "-"}</div>
-        </div>
-        <div>
           <div style={labelSm}>Unit Market Price</div>
           <div style={bigNumber}>{mktText}</div>
         </div>
@@ -213,7 +209,7 @@ function ForwardBlotter() {
         <input type="number" step="1000" value={notional} onChange={(e) => setNotional(Number(e.target.value))} />
       </Field>
 
-      <Field label="Expiry Date" note="ACT/365 day count">
+      <Field label="Expiry Date">
         <input type="date" value={expiry} onChange={(e) => setExpiry(e.target.value)} />
       </Field>
 
@@ -226,10 +222,6 @@ function ForwardBlotter() {
       </Field>
 
       <div style={priceRow}>
-        <div>
-          <div style={labelSm}>Year fraction τ</div>
-          <div>{tau > 0 ? tau.toFixed(6) : "—"}</div>
-        </div>
         <div>
           <div style={labelSm}>Forward Rate</div>
           <div style={bigNumber}>{isFinite(fwd) ? fwd.toFixed(6) : "—"}</div>

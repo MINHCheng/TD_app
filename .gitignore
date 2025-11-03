@@ -1,0 +1,10 @@
+# Ignore compressed archives
+*.zip
+*.7z
+
+# Ignore PDFs
+*.pdf
+
+# Ignore extracted temporary folders (optional)
+__pycache__/
+*.tmp
